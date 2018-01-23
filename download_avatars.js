@@ -1,3 +1,4 @@
+var args = process.argv.splice(2);
 var request = require('request');
 var secret = require('./secrets');
 var fs = require('fs');
@@ -18,7 +19,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
   });
 }
 
-getRepoContributors("nodejs", "node", function(err, result, callback) {
+getRepoContributors(args[0], args[1], function(err, result, callback) {
   console.log("Error:", err);
   console.log('Downloading images...');
   var js0n = JSON.parse(result);
@@ -38,4 +39,3 @@ getRepoContributors("nodejs", "node", function(err, result, callback) {
        .pipe(fs.createWriteStream(filePath));
   }
 });
-
