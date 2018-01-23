@@ -64,4 +64,4 @@ typings/
 secrets.js
 
 # Stop pictures from uploading
-avatars/
+*.jpg

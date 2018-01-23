@@ -24,7 +24,7 @@ getRepoContributors(args[0], args[1], function(err, result, callback) {
   console.log('Downloading images...');
   var js0n = JSON.parse(result);
     for (var obj of js0n) {
-      downloadImageByURL(obj["avatar_url"], './avatars/' + ['login'] + '.jpg', obj['login']);
+      downloadImageByURL(obj['avatar_url'], './' + './avatars/' + '/' + obj['login'] + '.jpg', obj['login']);
     }
 
   function downloadImageByURL(url, filePath, login) {

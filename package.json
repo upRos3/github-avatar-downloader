@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/upRos3/github-avatar-downloader#readme",
   "dependencies": {
+    "mkdirp": "^0.5.1",
     "request": "^2.83.0"
   }
 }
