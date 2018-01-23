@@ -62,3 +62,6 @@ typings/
 
 # Keep token secret
 secrets.js
+
+# Keep images out
+*.jpg
