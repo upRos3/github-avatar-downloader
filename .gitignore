@@ -62,6 +62,3 @@ typings/
 
 # Keep token secret
 secrets.js
-
-# Stop pictures from uploading
-*.jpg

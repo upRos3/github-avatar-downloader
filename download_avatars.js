@@ -7,7 +7,7 @@ console.log('Welcome to the GitHub Avatar Downloader')
 
 function getRepoContributors(repoOwner, repoName, cb) {
   var options = {
-    url: "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contributors",
+    url: 'https://api.github.com/repos/' + repoOwner + '/' + repoName + '/contributors',
     headers: {
       'User-Agent': 'request',
       'Authorization': secret.GITHUB_TOKEN
@@ -20,7 +20,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
 }
 
 getRepoContributors(args[0], args[1], function(err, result, callback) {
-  console.log("Error:", err);
+  console.log('Error:', err);
   console.log('Downloading images...');
   var js0n = JSON.parse(result);
     for (var obj of js0n) {
@@ -36,6 +36,6 @@ getRepoContributors(args[0], args[1], function(err, result, callback) {
 
       console.log('Image of: ' + login + ' downloaded!');
     })
-       .pipe(fs.createWriteStream(filePath));
+      .pipe(fs.createWriteStream(filePath));
   }
 });
